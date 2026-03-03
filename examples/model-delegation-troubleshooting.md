@@ -62,7 +62,8 @@ Use model: kimik2
 
 ```bash
 # Test a model works for subagent delegation
-openclaw model test kimik2
+## Example (pseudocode): Run model health check
+# Note: No native "openclaw model test" command - use `openclaw models status` instead
 
 # Or spawn a quick test subagent
 sessions_spawn --model kimik2 --task "Say hi"

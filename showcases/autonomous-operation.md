@@ -84,7 +84,8 @@ tasks:
 */30 * * * * ~/.openclaw/workspace/scripts/self-check.sh >> /var/log/openclaw-selfcheck.log 2>&1
 ```
 
-### Thin Main Session Rule
+### Reference: Thin Main Session Rule
+> This content is documented in agent-prompts.md - see there for latest version
 
 Keep the main session minimal:
 
