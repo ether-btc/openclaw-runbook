@@ -76,7 +76,6 @@ tasks:
   - Log results
   - Alert if issues
 ```
-> **Note:** This YAML is pseudocode for illustration. OpenClaw uses JSON for configuration files. The YAML shows the intended structure; implement using JSON in your actual config.
 
 #### 3. Cron Recovery
 
@@ -86,6 +85,7 @@ tasks:
 ```
 
 ### Reference: Thin Main Session Rule
+> This content is documented in agent-prompts.md - see there for latest version
 
 Keep the main session minimal:
 
@@ -128,4 +128,4 @@ This prevents context switching and keeps coordinator fast.
 
 ---
 
-*Pattern developed through practical experience with OpenClaw 2026.x*
+*Pattern developed through实践经验 (practical experience) with OpenClaw 2026.x*

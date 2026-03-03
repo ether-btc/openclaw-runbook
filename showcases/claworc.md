@@ -49,3 +49,13 @@ Browser → Control Plane → [SSH tunnel] → Agent Container
 ---
 
 *Alternative to running everything on Raspberry Pi*
+
+---
+
+## Setup Steps Needed
+
+> Note: This entry needs expansion with concrete setup steps to match other showcases. Consider:
+> - Adding explicit installation commands
+> - Configuration examples
+> - Or moving to a "Community Tools" reference section
+
