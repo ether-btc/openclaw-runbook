@@ -52,10 +52,103 @@ Browser → Control Plane → [SSH tunnel] → Agent Container
 
 ---
 
-## Setup Steps Needed
+## Setup Steps
 
-> Note: This entry needs expansion with concrete setup steps to match other showcases. Consider:
-> - Adding explicit installation commands
-> - Configuration examples
-> - Or moving to a "Community Tools" reference section
+### Prerequisites
+
+- Docker installed on host machine
+- SSH key pair for remote access
+- At least 2GB RAM per OpenClaw instance
+- Git installed
+
+### Installation
+
+```bash
+# Clone the Claworc repository
+git clone https://github.com/gluk-w/claworc.git
+cd claworc
+
+# Copy example configuration
+cp config.example.yaml config.yaml
+
+# Edit configuration with your settings
+nano config.yaml
+```
+
+### Configuration
+
+```yaml
+# config.yaml
+instances:
+  - name: primary
+    container: openclaw-primary
+    port: 18789
+    ssh_port: 2222
+    vnc_port: 3000
+  
+  - name: analysis
+    container: openclaw-analysis  
+    port: 18790
+    ssh_port: 2223
+    vnc_port: 3001
+
+security:
+  ssh_key_path: ~/.ssh/id_rsa
+  api_key_encryption: enabled
+  rate_limit: 100/hour
+
+access_control:
+  admin_users:
+    - your-email@example.com
+  require_biometric: false
+```
+
+### Running
+
+```bash
+# Start all instances
+docker-compose up -d
+
+# Access dashboard
+# Open http://localhost:8080 in browser
+
+# View logs
+docker-compose logs -f
+```
+
+### Verifying Setup
+
+```bash
+# Check all containers running
+docker ps | grep openclaw
+
+# Test SSH access to instance
+ssh -p 2222 user@localhost
+
+# Check gateway health
+curl http://localhost:18789/health
+```
+
+### Maintenance
+
+```bash
+# Stop all instances
+docker-compose down
+
+# Update to latest version
+git pull
+docker-compose pull
+docker-compose up -d
+```
+
+### Uninstallation
+
+```bash
+# Stop and remove containers
+docker-compose down -v
+
+# Remove repository
+cd ..
+rm -rf claworc
+```
 
