@@ -76,6 +76,7 @@ tasks:
   - Log results
   - Alert if issues
 ```
+> **Note:** This YAML is pseudocode for illustration. OpenClaw uses JSON for configuration files. The YAML shows the intended structure; implement using JSON in your actual config.
 
 #### 3. Cron Recovery
 
@@ -128,4 +129,4 @@ This prevents context switching and keeps coordinator fast.
 
 ---
 
-*Pattern developed through实践经验 (practical experience) with OpenClaw 2026.x*
+*Pattern developed through practical experience with OpenClaw 2026.x*
