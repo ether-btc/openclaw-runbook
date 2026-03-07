@@ -86,7 +86,6 @@ tasks:
 ```
 
 ### Reference: Thin Main Session Rule
-> This content is documented in agent-prompts.md - see there for latest version
 
 Keep the main session minimal:
 
