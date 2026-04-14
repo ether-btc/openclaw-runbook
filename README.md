@@ -98,3 +98,8 @@ Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening issues or pull r
 ## License
 
 MIT
+
+---
+
+If this saved you time or made your day a little better, consider sharing a coffee — and keep the ideas flowing.
+[konto.fkey.id](https://konto.fkey.id/)
